@@ -5,8 +5,8 @@ public class CalculatorTests
     [Fact]
     public void Add_TwoNumbers_ReturnsCorrectResult()
     {
-        double result = 2 + 3;
-        Assert.Equal(5, result); // ← wrong on purpose!
+        double result = 2 + 4;
+        Assert.Equal(6, result); // ← wrong on purpose!
     }
 
     [Fact]
