@@ -6,7 +6,7 @@ public class CalculatorTests
     public void Add_TwoNumbers_ReturnsCorrectResult()
     {
         double result = 2 + 3;
-        Assert.Equal(99, result); // ← wrong on purpose!
+        Assert.Equal(5, result); // ← wrong on purpose!
     }
 
     [Fact]
