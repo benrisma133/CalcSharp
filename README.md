@@ -30,26 +30,28 @@ A clean, minimal WPF Calculator built with C# and .NET 8, featuring a full CI/CD
 ## 📁 Project Structure
 
 ```
-
 CalcSharp/
 ├── .github/
 │   └── workflows/
 │       └── ci.yml        ← CI/CD pipeline
 ├── CalcSharp/            ← WPF UI
+│   ├── App.xaml
+│   ├── App.xaml.cs
+│   ├── AssemblyInfo.cs
+│   ├── CalcSharp.csproj
 │   ├── MainWindow.xaml
 │   └── MainWindow.xaml.cs
 ├── CalcSharp.Tests/      ← xUnit tests
+│   ├── CalcSharp.Tests.csproj
 │   └── CalculatorTests.cs
 └── CalcSharp.slnx
-
 ```
-
 
 ---
 
 ## ⚙️ CI/CD Pipeline
 
-Every push to `main` automatically:
+Every push or pull request to `main` automatically:
 
 1. ✅ Builds the project
 2. ✅ Runs all xUnit tests
@@ -62,7 +64,7 @@ Every push to `main` automatically:
 
 | Test | Description |
 |------|-------------|
-| `Add_TwoNumbers_ReturnsCorrectResult` | 2 + 3 = 5 |
+| `Add_TwoNumbers_ReturnsCorrectResult` | 2 + 4 = 6 |
 | `Subtract_TwoNumbers_ReturnsCorrectResult` | 10 - 4 = 6 |
 | `Multiply_TwoNumbers_ReturnsCorrectResult` | 3 × 4 = 12 |
 | `Divide_TwoNumbers_ReturnsCorrectResult` | 10 ÷ 2 = 5 |
@@ -74,10 +76,10 @@ Every push to `main` automatically:
 
 1. Clone the repository
 ```bash
-   git clone https://github.com/benrisma133/CalcSharp.git
+git clone https://github.com/benrisma133/CalcSharp.git
 ```
-2. Open `CalcSharp.slnx` in Visual Studio 2022
-3. Press `F5` to run
+2. Open `CalcSharp.slnx` in Visual Studio 2022 (or Rider / VS Code with .NET WPF support)
+3. Press `F5` to run or use `dotnet run --project CalcSharp/CalcSharp.csproj` on Windows
 
 ---
 
